@@ -1,15 +1,18 @@
 package model;
 
+import model.enums.Manufacturer;
+import model.enums.ShelfLife;
+
 public class Product {
     private int id;
     private String name;
     private int upc;
-    private String manufacturer;
+    private Manufacturer manufacturer;
     private double price;
-    private int shelfLife;
+    private ShelfLife shelfLife;
     private int count;
 
-    public Product(int id, String name, int upc, String manufacturer, double price, int shelfLife, int count) {
+    public Product(int id, String name, int upc, Manufacturer manufacturer, double price, ShelfLife shelfLife, int count) {
         this.id = id;
         this.name = name;
         this.upc = upc;
@@ -19,7 +22,7 @@ public class Product {
         this.count = count;
     }
 
-    public Product(int id, String name, double price) {
+    public Product(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -44,7 +47,7 @@ public class Product {
         return upc;
     }
 
-    public String getManufacturer() {
+    public Manufacturer getManufacturer() {
         return manufacturer;
     }
 
@@ -52,7 +55,7 @@ public class Product {
         return price;
     }
 
-    public int getShelfLife() {
+    public ShelfLife getShelfLife() {
         return shelfLife;
     }
 
@@ -60,7 +63,7 @@ public class Product {
         return count;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
